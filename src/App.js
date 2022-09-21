@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import React, { useState, useEffect } from "react"
+import { Route } from "react-router-dom"
+
+import Header from "./Header"
 import KicksContainer from './KicksContainer'
+import Store from './Store'
 import './App.css';
 
 function App() {
@@ -14,10 +18,13 @@ function App() {
       .then( data => setKicks(data))
     }, [])
 
-    console.log(kicks)
+  
 
   return (
-    <KicksContainer kicks={kicks} />
+    <Route path="/">
+      <Store kicks={kicks} />
+    </Route>
+    
   );
 }
 
