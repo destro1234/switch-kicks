@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import React, { useState, useEffect } from "react"
-import { Route } from "react-router-dom"
+import { Route, Switch } from "react-router-dom"
 
-import Header from "./Header"
-import KicksContainer from './KicksContainer'
-import Store from './Store'
+import Closet from "./components/Closet"
+import Header from "./components/Header"
+import KicksContainer from './components/KicksContainer'
+import Store from './components/Store'
 import './App.css';
 
 function App() {
@@ -18,12 +19,22 @@ function App() {
       .then( data => setKicks(data))
     }, [])
 
-  
-
   return (
-    <Route path="/">
-      <Store kicks={kicks} />
-    </Route>
+    <div>
+    <Header />
+      <Switch>
+   
+
+        <Route path="/closet">
+          <Closet />
+        </Route>
+
+        <Route path="/">
+          <Store kicks={kicks} />
+        </Route>
+        
+      </Switch>
+    </div>
     
   );
 }

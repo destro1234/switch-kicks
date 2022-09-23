@@ -6,7 +6,7 @@ function Store({kicks}) {
     
         return (
             <div>
-              <Header/>
+              {/* <Header/> */}
               <KicksContainer kicks={kicks} />
             </div>
           )

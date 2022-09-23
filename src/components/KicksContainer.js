@@ -8,7 +8,7 @@ function KicksContainer({kicks}) {
         {
             kicks.map( ( kick ) => (
                 
-                <KicksCard key={kick.id} name={kick.name} image={kick.image} style={kick.style} color={kick.colorway} price={kick.price} date={kick.date} description={kick.description}/> ))
+                <KicksCard key={kick.id} name={kick.name} image={kick.image} color={kick.colorway} price={kick.price} condition={kick.condition} description={kick.description}/> ))
         }
         
     </div>
