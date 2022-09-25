@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import KicksCard from './KicksCard'
 
-function KicksContainer({kicks}) {
+function KicksContainer({kicks, onBuy}) {
 
-    function handleBuy(kick) {
-        console.log(kick)
-    }
+    
 
    return (
     <div>
@@ -13,7 +11,7 @@ function KicksContainer({kicks}) {
         {
             kicks.map( ( kick ) => (
                 
-                <KicksCard key={kick.id} kick={kick} name={kick.name} image={kick.image} color={kick.colorway} price={kick.price} condition={kick.condition} description={kick.description} onBuy={handleBuy}/> ))
+                <KicksCard key={kick.id} kick={kick} name={kick.name} image={kick.image} color={kick.colorway} price={kick.price} condition={kick.condition} description={kick.description} onBuy={onBuy}/> ))
         }
         
     </div>

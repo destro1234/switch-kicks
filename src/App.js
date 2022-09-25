@@ -11,6 +11,8 @@ import './App.css';
 function App() {
 
   const [kicks, setKicks] = useState([])
+  const [ closetKicks, setClosetKicks ] = useState([])
+
 
 
     useEffect(() => {
@@ -19,6 +21,12 @@ function App() {
       .then( data => setKicks(data))
     }, [])
 
+
+    function handleBuy(kick) {
+        setClosetKicks([...closetKicks, kick])
+        console.log(closetKicks)
+    }
+
   return (
     <div>
     <Header />
@@ -26,13 +34,12 @@ function App() {
    
 
         <Route path="/closet">
-          <Closet />
+          <Closet kicks={closetKicks}/>
         </Route>
 
         <Route path="/">
-          <Store kicks={kicks} />
+          <Store kicks={kicks} onBuy={handleBuy} />
         </Route>
-        
       </Switch>
     </div>
     
