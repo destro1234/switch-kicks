@@ -4,14 +4,16 @@ import { Route, Switch } from "react-router-dom"
 
 import Closet from "./components/Closet"
 import Header from "./components/Header"
-import KicksContainer from './components/KicksContainer'
 import Store from './components/Store'
+import Flipped from "./components/Flipped"
 import './App.css';
 
 function App() {
 
   const [kicks, setKicks] = useState([])
   const [ closetKicks, setClosetKicks ] = useState([])
+  const [wallet, setWallet] = useState(1000)
+
 
 
 
@@ -24,21 +26,32 @@ function App() {
 
     function handleBuy(kick) {
         setClosetKicks([...closetKicks, kick])
-        console.log(closetKicks)
+        let updateWallet = wallet - kick.price.substring(1)
+        if (wallet > kick.price.substring(1)) {
+          setWallet(updateWallet)
+        }
+        console.log(updateWallet)
+        
     }
 
   return (
     <div>
+
     <Header />
+
+    <h1 className="remaining">Wallet: ${wallet}</h1>
+
       <Switch>
-   
+        <Route path="/flipped" >
+          <Flipped />
+        </Route>
 
         <Route path="/closet">
-          <Closet kicks={closetKicks}/>
+          <Closet kicks={closetKicks} wallet={wallet} />
         </Route>
 
         <Route path="/">
-          <Store kicks={kicks} onBuy={handleBuy} />
+          <Store kicks={kicks} onBuy={handleBuy} wallet={wallet} />
         </Route>
       </Switch>
     </div>

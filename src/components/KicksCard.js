@@ -1,9 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 
-function KicksCard({ kick, name, image, color, price, description, condition, onBuy }) {
+
+function KicksCard({ kick, name, image, color, price, description, condition, onBuy, wallet }) {
+
+    const [purchase, setPurchased] = useState("")
 
     function handleBuy(event) {
         onBuy(kick)
+        condition = "pre-owned"
+        console.log(wallet)
         console.log(event)
     }
 
