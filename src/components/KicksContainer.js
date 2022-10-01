@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import KicksCard from './KicksCard'
 import './Components.css'
 

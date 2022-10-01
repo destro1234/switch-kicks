@@ -1,31 +1,35 @@
 import React, { useState } from "react"
 
 
-function ClosetCard({ kick, name, image, color, price, description, condition, onBuy }) {
+function ClosetCard({ kick, name, image, price, resell, condition, wallet, setWallet, onDelete }) {
 
-    const [purchase, setPurchased] = useState("")
     const [updatedPrice, setUpdatedPrice] = useState(price)
+    const [updatedCondition, setUpdatedCondition] = useState(condition)
     
-    function handleBuy(event) {
+    function handleWear() {
         price = `$${price.substring(1) * .5}`
-        console.log("This is the closet")
+        let wornCondition = 'pre-owned'
         setUpdatedPrice(price)
-        console.log(price)
-        console.log(updatedPrice)
+        setUpdatedCondition(wornCondition)
     }
 
+    function handleSell() {
+        let updateWallet = wallet + parseInt(updatedPrice.substring(1))
+        setWallet(updateWallet)
+        onDelete(kick)
+      }
+
     return (
-        
+    
         <div>
         
             <h1>This is the { name } kick card</h1>
             <img src={ image }/>
-            
-            <h2>Color: { color }</h2>
-            <h2>Price: { updatedPrice }</h2>
-            <h2>Condition: { condition }</h2>
-            <p>{ description }</p>
-            <button onClick={handleBuy}>Wear Kicks!</button>
+            <h2>Purchase Price: { price }</h2>
+            <h2>Resell Price: {resell} </h2>
+            <h2>Condition: { updatedCondition }</h2>
+            <button onClick={handleWear}>Wear Kicks!</button>
+            <button onClick={handleSell}>Sell Kicks!</button>
         </div>
     )
 }

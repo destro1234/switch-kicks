@@ -11,7 +11,6 @@ import './App.css';
 function App() {
 
   const [kicks, setKicks] = useState([])
-  const [ closetKicks, setClosetKicks ] = useState([])
   const [wallet, setWallet] = useState(1000)
 
 
@@ -23,16 +22,20 @@ function App() {
       .then( data => setKicks(data))
     }, [])
 
+    
+
 
     function handleBuy(kick) {
-        setClosetKicks([...closetKicks, kick])
         let updateWallet = wallet - kick.price.substring(1)
         if (wallet > kick.price.substring(1)) {
           setWallet(updateWallet)
         }
-        console.log(updateWallet)
-        
-    }
+        else {
+          alert("You ran out of funds!!")
+        }
+      }
+
+    
 
   return (
     <div>
@@ -47,7 +50,7 @@ function App() {
         </Route>
 
         <Route path="/closet">
-          <Closet kicks={closetKicks} wallet={wallet} />
+          <Closet wallet={wallet} setWallet={setWallet}/>
         </Route>
 
         <Route path="/">

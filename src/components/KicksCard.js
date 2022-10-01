@@ -1,15 +1,29 @@
-import React, { useState } from "react"
+import React from "react"
 
 
-function KicksCard({ kick, name, image, color, price, description, condition, onBuy, wallet }) {
+function KicksCard({ kick, name, image, color, price, description, condition, onBuy}) {
 
-    const [purchase, setPurchased] = useState("")
 
     function handleBuy(event) {
         onBuy(kick)
-        condition = "pre-owned"
-        console.log(wallet)
-        console.log(event)
+
+
+
+        fetch("http://localhost:3000/closetkicks", {
+            method: "POST",
+            headers : {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: kick.name,
+                image: kick.image,
+                colorway: kick.color,
+                resellPrice: parseInt(kick.price.substring(1)) + 100,
+                price: kick.price, 
+                description: kick.description,
+                condition: kick.condition
+        })
+        })
     }
 
     return (
