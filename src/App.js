@@ -26,8 +26,8 @@ function App() {
 
 
     function handleBuy(kick) {
-        let updateWallet = wallet - kick.price.substring(1)
-        if (wallet > kick.price.substring(1)) {
+        let updateWallet = wallet - kick.price
+        if (wallet > kick.price) {
           setWallet(updateWallet)
         }
         else {
@@ -42,11 +42,11 @@ function App() {
 
     <Header />
 
-    <h1 className="remaining">Wallet: ${wallet}</h1>
+    
 
       <Switch>
         <Route path="/flipped" >
-          <Flipped />
+          <Flipped wallet={wallet}/>
         </Route>
 
         <Route path="/closet">

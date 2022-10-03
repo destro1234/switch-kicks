@@ -1,14 +1,13 @@
 import React from "react"
 
 
-function KicksCard({ kick, name, image, color, price, description, condition, onBuy}) {
+function KicksCard({ kick, onBuy}) {
 
 
-    function handleBuy(event) {
+
+    function handleBuy() {
+        alert(`Congrats you just bought a pair of  ${kick.name}!`)
         onBuy(kick)
-
-
-
         fetch("http://localhost:3000/closetkicks", {
             method: "POST",
             headers : {
@@ -18,7 +17,7 @@ function KicksCard({ kick, name, image, color, price, description, condition, on
                 name: kick.name,
                 image: kick.image,
                 colorway: kick.color,
-                resellPrice: parseInt(kick.price.substring(1)) + 100,
+                resellPrice: kick.price + 100,
                 price: kick.price, 
                 description: kick.description,
                 condition: kick.condition
@@ -30,13 +29,13 @@ function KicksCard({ kick, name, image, color, price, description, condition, on
         
         <div>
         
-            <h1>This is the { name } kick card</h1>
-            <img src={ image }/>
+            <h1>This is the { kick.name } kick card</h1>
+            <img src={ kick.image }/>
             
-            <h2>Color: { color }</h2>
-            <h2>Price: { price }</h2>
-            <h2>Condition: { condition }</h2>
-            <p>{ description }</p>
+            <h2>Color: { kick.colorway }</h2>
+            <h2>Price: ${ kick.price }</h2>
+            <h2>Condition: { kick.condition }</h2>
+            <p>{ kick.description }</p>
             <button onClick={handleBuy}>Buy Kick!</button>
         </div>
     )

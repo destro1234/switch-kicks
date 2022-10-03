@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import ClosetCard from './ClosetCard'
+import "./Components.css"
 
 function Closet({ wallet, setWallet}) {
 
     const [ closetKicks, setClosetKicks ] = useState([])
-    const [flippedKicks, setFlippedKicks] = useState()
+    const [ flipped, setFlipped ] = useState(false)
 
 
     useEffect( () => {
@@ -29,10 +30,13 @@ function Closet({ wallet, setWallet}) {
     return (
         <div>
              <h1>This is the Kicks Closet</h1>
+             <h1 className="remaining">Wallet: ${wallet}</h1>
         {
             closetKicks.map( ( kick ) => (
                 
-                <ClosetCard key={kick.id} kick={kick} name={kick.name} image={kick.image} color={kick.color} price={kick.price} resell={`$${kick.resellPrice}`} condition={kick.condition} description={kick.description} wallet={wallet} setWallet={setWallet} onDelete={handleDelete} /> ))
+                <ClosetCard key={kick.id} kick={kick} resell={`${kick.resellPrice}`}
+                // name={kick.name} image={kick.image} color={kick.color} price={kick.price}  condition={kick.condition} description={kick.description} 
+                wallet={wallet} setWallet={setWallet} onDelete={handleDelete} isFlipped={flipped} /> ))
         }
         </div>
     )
