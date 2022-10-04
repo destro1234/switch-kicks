@@ -1,4 +1,5 @@
 import React from "react"
+import './Components.css'
 
 
 function KicksCard({ kick, onBuy}) {
@@ -18,18 +19,19 @@ function KicksCard({ kick, onBuy}) {
                 image: kick.image,
                 colorway: kick.color,
                 resellPrice: kick.price + 100,
-                price: kick.price, 
-                description: kick.description,
+                price: kick.price,
                 condition: kick.condition
         })
         })
+        .then( r => r.json())
+        .then( data => console.log(data))
     }
 
     return (
         
-        <div>
+        <div className="store-card">
         
-            <h1>This is the { kick.name } kick card</h1>
+            <h2>{ kick.name } </h2>
             <img src={ kick.image }/>
             
             <h2>Color: { kick.colorway }</h2>

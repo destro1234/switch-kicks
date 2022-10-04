@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import './Components.css'
 
 function ClosetCard({ kick, resell, wallet, setWallet, onDelete, isFlipped }) {
 
@@ -16,16 +16,11 @@ function ClosetCard({ kick, resell, wallet, setWallet, onDelete, isFlipped }) {
     }
 
     function handleSell() {
-        // let allProfit = parseInt(totalProfit) + parseInt(profit) 
-        // console.log(allProfit)
-        // setTotalProfit(allProfit)
         
         let updateWallet = parseInt(wallet) + parseInt(price)
         setWallet(updateWallet)
         onDelete(kick)
-        setFlipped(!flipped)
-        console.log(!flipped)
-        
+        setFlipped(!flipped)        
 
        
         fetch("http://localhost:3000/flippedkicks", {
@@ -50,13 +45,12 @@ function ClosetCard({ kick, resell, wallet, setWallet, onDelete, isFlipped }) {
 
         if (flipped === true ) {
             return (
-                <div>
+                <div className="card">
                 <h1> { kick.name } </h1>
                 <img src={ kick.image }/>
                 <h2>Purchase Price: ${ kick.price }</h2>
                 <h2>Resell Price: ${ price } </h2>
-                {/* <h2>Condition: { updatedCondition }</h2> */}
-                <button> Congratulations you made ${ profit }! </button>
+                <button className="btn btn-primary"> You { profit > 0 ? `made $${ profit }`: `lost $${ profit }` }! </button>
                 </div>
 
             )
@@ -64,14 +58,21 @@ function ClosetCard({ kick, resell, wallet, setWallet, onDelete, isFlipped }) {
         }
         else if (flipped === false) {
             return (
+                
                 <div>
-                    <h1>This is the { kick.name } kick card</h1>
+                
+                    <h1>{ kick.name } </h1>
                     <img src={ kick.image }/>
                     <h2>Purchase Price: ${ kick.price }</h2>
                     <h2>Resell Price: ${ price } </h2>
                     <h2>Condition: { updatedCondition }</h2>
-                    <button onClick={handleWear}>Wear Kicks!</button>
-                    <button onClick={handleSell}>Sell Kicks!</button>
+                    
+                    
+                    <div class="d-grid gap-2">
+                        <button className="btn btn-primary" type="button" onClick={handleWear}>Wear Kicks!</button>
+                        <button className="btn btn-primary" type="button" onClick={handleSell}>Sell Kicks!</button>
+                    
+                    </div>
                 </div>
                 )
         }
@@ -83,11 +84,14 @@ function ClosetCard({ kick, resell, wallet, setWallet, onDelete, isFlipped }) {
     
     return (
     
-        <div>
         
-           
+        
+            
+        <div >
+        
 
             <Card />
+            
             
         </div>
     )

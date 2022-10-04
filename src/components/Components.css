@@ -1,4 +1,38 @@
 .remaining {
+    padding-left: 100px;
+    text-align: left;
     grid-area: rm;
     margin: auto;
+    padding-bottom: 100px;
   }
+
+.store-card {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 100px
+}
+
+.flippedcard {
+  width: 10%;
+  margin-right: auto
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.rowC{display:flex; flex-direction:row;}
+
+form {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 100px
+}

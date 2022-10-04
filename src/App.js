@@ -12,6 +12,7 @@ function App() {
 
   const [kicks, setKicks] = useState([])
   const [wallet, setWallet] = useState(1000)
+  const [totalProfit, setTotalProfit] = useState(0)
 
 
 
@@ -46,15 +47,15 @@ function App() {
 
       <Switch>
         <Route path="/flipped" >
-          <Flipped wallet={wallet}/>
+          <Flipped wallet={wallet} setTotalProfit={setTotalProfit}/>
         </Route>
 
         <Route path="/closet">
-          <Closet wallet={wallet} setWallet={setWallet}/>
+          <Closet wallet={wallet} setWallet={setWallet} totalProfit={totalProfit}/>
         </Route>
 
         <Route path="/">
-          <Store kicks={kicks} onBuy={handleBuy} wallet={wallet} />
+          <Store kicks={kicks} onBuy={handleBuy} wallet={wallet} totalProfit={totalProfit} />
         </Route>
       </Switch>
     </div>

@@ -1,13 +1,22 @@
-import React from 'react'
-import Header from "./Header"
+import React, { useState } from 'react'
 import KicksCard from "./KicksCard"
 
-function Store({ kicks, onBuy, wallet }) {
+function Store({ kicks, onBuy, wallet, totalProfit }) {
     
+
+  
+
+
   return (
     <div>
-      <h1>This is the Store!</h1>
-      <h1 className="remaining">Wallet: ${wallet}</h1>
+      <h1>Welcome to  the Store!</h1>
+
+      <div className="remaining">
+      <h5>Wallet: ${wallet}</h5>
+
+      <h5>Total Profit: ${ totalProfit  } </h5>
+      </div>
+
 
         {
             kicks.map( ( kick ) => (
