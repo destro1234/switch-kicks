@@ -10,6 +10,7 @@ function ClosetCard({ kick, resell, wallet, setWallet, onDelete, isFlipped }) {
 
 
     function handleWear() {
+        
         setPrice(kick.price * .5)
         let wornCondition = 'pre-owned'
         setUpdatedCondition(wornCondition)

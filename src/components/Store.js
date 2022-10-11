@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import KicksCard from "./KicksCard"
 
-function Store({ kicks, onBuy, wallet, totalProfit }) {
+function Store({ kicks, onBuy, wallet }) {
     
 
   
@@ -14,7 +14,7 @@ function Store({ kicks, onBuy, wallet, totalProfit }) {
       <div className="remaining">
       <h5>Wallet: ${wallet}</h5>
 
-      <h5>Total Profit: ${ totalProfit  } </h5>
+      
       </div>
 
 

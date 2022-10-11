@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import React, { useState, useEffect } from "react"
 import { Route, Switch } from "react-router-dom"
 
 import Closet from "./components/Closet"
-import Header from "./components/Header"
+import NavBar from "./components/NavBar"
 import Store from './components/Store'
 import Flipped from "./components/Flipped"
 import './App.css';
@@ -12,7 +11,6 @@ function App() {
 
   const [kicks, setKicks] = useState([])
   const [wallet, setWallet] = useState(1000)
-  const [totalProfit, setTotalProfit] = useState(0)
 
 
 
@@ -41,21 +39,22 @@ function App() {
   return (
     <div>
 
-    <Header />
+        <h1 className="App-header">SwitchKicks! </h1>
+          <NavBar />
 
     
 
       <Switch>
         <Route path="/flipped" >
-          <Flipped wallet={wallet} setTotalProfit={setTotalProfit}/>
+          <Flipped wallet={wallet}/>
         </Route>
 
         <Route path="/closet">
-          <Closet wallet={wallet} setWallet={setWallet} totalProfit={totalProfit}/>
+          <Closet wallet={wallet} setWallet={setWallet}/>
         </Route>
 
         <Route path="/">
-          <Store kicks={kicks} onBuy={handleBuy} wallet={wallet} totalProfit={totalProfit} />
+          <Store kicks={kicks} onBuy={handleBuy} wallet={wallet} />
         </Route>
       </Switch>
     </div>

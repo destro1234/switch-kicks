@@ -5,9 +5,11 @@ function NavBar() {
     return (
         <div className="nav nav-pills">
             
-            <NavLink to={"/"} >Store</NavLink>
-            <NavLink to={"/closet"}>Closet</NavLink>
-            <NavLink to={"/flipped"}>Flipped</NavLink>
+            <NavLink style={{ marginLeft: '.5rem' }} to={"/"} >Store</NavLink>
+            
+            <NavLink style ={{ marginLeft: '.5rem' } }to={"/closet"}>Closet</NavLink>
+            
+            <NavLink style={{ marginLeft: '.5rem' }} to={"/flipped"}>Flipped</NavLink>
 
         </div>
     )

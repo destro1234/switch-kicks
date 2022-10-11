@@ -73,62 +73,33 @@
       "condition": "Brand New/DS"
     }
   ],
-  "closetkicks": [],
-  "flippedkicks": [
-    {
-      "name": "Jordan 1",
-      "image": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-White-University-Blue-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611777406",
-      "resellPrice": "400",
-      "price": 200,
-      "condition": "Brand New/DS",
-      "profit": 200,
-      "id": 1
-    },
-    {
-      "name": "Jordan 1",
-      "image": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-White-University-Blue-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611777406",
-      "resellPrice": 100,
-      "price": 200,
-      "condition": "pre-owned",
-      "profit": -100,
-      "id": 2
-    },
+  "closetkicks": [
     {
       "name": "Jordan 3 Retro \"Mocha\"",
       "image": "https://images.stockx.com/images/Air-Jordan-3-Retro-Mocha-2018.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1607662903",
-      "resellPrice": "290",
+      "resellPrice": 290,
       "price": 190,
       "condition": "Brand New/DS",
-      "profit": 100,
-      "id": 3
-    },
-    {
-      "name": "Jordan 1",
-      "image": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-White-University-Blue-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611777406",
-      "resellPrice": "400",
-      "price": 200,
-      "condition": "Brand New/DS",
-      "profit": 200,
-      "id": 4
-    },
-    {
-      "name": "Nike Dunk Low \"Off-White Lot 16\"",
-      "image": "https://images.stockx.com/images/Nike-Dunk-Low-Off-White-Lot-16-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1629306796",
-      "resellPrice": 90,
-      "price": 180,
-      "condition": "pre-owned",
-      "profit": -90,
       "id": 5
     },
     {
       "name": "Jordan 1",
       "image": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-White-University-Blue-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611777406",
-      "resellPrice": 100,
+      "resellPrice": 400,
       "price": 200,
-      "condition": "pre-owned",
-      "profit": -100,
+      "condition": "Brand New/DS",
       "id": 6
     },
+    {
+      "name": "Jordan 1",
+      "image": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-White-University-Blue-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611777406",
+      "resellPrice": 400,
+      "price": 200,
+      "condition": "Brand New/DS",
+      "id": 7
+    }
+  ],
+  "flippedkicks": [
     {
       "name": "Jordan 1",
       "image": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-White-University-Blue-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611777406",
@@ -136,16 +107,25 @@
       "price": 200,
       "condition": "pre-owned",
       "profit": -100,
-      "id": 7
+      "id": 1
     },
     {
-      "name": "Jordan 3 Retro \"Mocha\"",
-      "image": "https://images.stockx.com/images/Air-Jordan-3-Retro-Mocha-2018.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1607662903",
-      "resellPrice": 95,
-      "price": 190,
-      "condition": "pre-owned",
-      "profit": -95,
-      "id": 8
+      "name": "Nike Air Max 1 \"Anniversary Red\"",
+      "image": "https://images.stockx.com/images/Nike-Air-Max-1-Anniversary-Red-2017-Restock-V2-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1660143486",
+      "resellPrice": "240",
+      "price": 140,
+      "condition": "Brand New/DS",
+      "profit": 100,
+      "id": 2
+    },
+    {
+      "name": "Jordan 3 Retro \"Joker\"",
+      "image": "https://images.stockx.com/images/Air-Jordan-3-Retro-Joker-ASG-2013-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1607663386",
+      "resellPrice": "260",
+      "price": 160,
+      "condition": "Brand New/DS",
+      "profit": 100,
+      "id": 3
     },
     {
       "name": "Nike Air Max 1 \"Anniversary Red\"",
@@ -154,7 +134,43 @@
       "price": 140,
       "condition": "pre-owned",
       "profit": -70,
-      "id": 9
+      "id": 4
+    },
+    {
+      "name": "Jordan 1",
+      "image": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-White-University-Blue-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611777406",
+      "resellPrice": 100,
+      "price": 200,
+      "condition": "pre-owned",
+      "profit": -100,
+      "id": 5
+    },
+    {
+      "name": "Jordan 3 Retro \"Mocha\"",
+      "image": "https://images.stockx.com/images/Air-Jordan-3-Retro-Mocha-2018.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1607662903",
+      "resellPrice": 95,
+      "price": 190,
+      "condition": "pre-owned",
+      "profit": -95,
+      "id": 6
+    },
+    {
+      "name": "Jordan 3 Retro \"Mocha\"",
+      "image": "https://images.stockx.com/images/Air-Jordan-3-Retro-Mocha-2018.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1607662903",
+      "resellPrice": "290",
+      "price": 190,
+      "condition": "Brand New/DS",
+      "profit": 100,
+      "id": 7
+    },
+    {
+      "name": "Jordan 3 Retro \"Joker\"",
+      "image": "https://images.stockx.com/images/Air-Jordan-3-Retro-Joker-ASG-2013-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1607663386",
+      "resellPrice": "260",
+      "price": 160,
+      "condition": "Brand New/DS",
+      "profit": 100,
+      "id": 8
     }
   ]
 }

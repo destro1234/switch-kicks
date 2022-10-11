@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react"
 import ClosetCard from "./ClosetCard"
 
 
-function Flipped({ wallet, setTotalProfit }) {
+function Flipped({ wallet }) {
 
     const [flipped, setFlipped] = useState(true)
     const [flippedKicks, setFlippedKicks] = useState([])
+    // const [totalProfit, setTotalProfit] = useState(0)
     let totalProfit = 0
 
     useEffect( () => {
@@ -15,12 +16,11 @@ function Flipped({ wallet, setTotalProfit }) {
         }, [ ])
 
         
-       if (flippedKicks.length > 0 ) {
+        if (flippedKicks.length > 0 ) {
             totalProfit = flippedKicks.reduce(
             (previousValue, currentValue) => previousValue + currentValue.profit,
             totalProfit
           );
-          setTotalProfit(totalProfit)
        }
 
     return (

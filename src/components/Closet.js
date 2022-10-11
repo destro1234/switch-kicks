@@ -3,7 +3,7 @@ import ClosetCard from './ClosetCard'
 import Form from './Form'
 import "./Components.css"
 
-function Closet({ wallet, setWallet, totalProfit}) {
+function Closet({ wallet, setWallet }) {
 
     const [ closetKicks, setClosetKicks ] = useState([])
     const [ flipped, setFlipped ] = useState(false)
@@ -53,7 +53,6 @@ function Closet({ wallet, setWallet, totalProfit}) {
         <div className="remaining">
         <h5>Wallet: ${wallet}</h5>
 
-        <h5>Total Profit: ${ totalProfit  } </h5>
         </div>
         
         
