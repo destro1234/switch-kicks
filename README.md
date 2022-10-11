@@ -1,6 +1,6 @@
-Switch Kicks - Your closet for reselling kicks!
+# Switch Kicks - Your closet for reselling kicks!
 
-Description
+## Description
 
 This is an app for reselling sneakers. You can visit the store page to purchase new sneakers that you would want to add to your closet. You can view the sneakers you have purchased in the closet page. In the closet you can choose to wear your sneakers or resell or flip them. Once the sneakers hav been "flipped" they are added to the flipped kicks page and the total profit that you made or loss on the resell is calculated and added up to see how much profit has been made!
 
